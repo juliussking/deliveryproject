@@ -1,14 +1,17 @@
 <template>
-  <div class="container max-w-4xl min-w-sm mx-auto pb-3 relative">
+  <div class="container max-w-4xl min-w-sm mx-auto py-3 relative ">
 
     <SidebarCart />
 
 
     <CartSidebarOverlay v-if="openSidebarCart" @closeSidebarCart="openSidebarCart = false" />
 
-    <div class="cartIcon p-2 relative">
+    <div class="cartIcon p-2 lg:absolute fixed bottom-3 right-3 lg:top-5 lg:right-0 ">
 
-      <CartIcon @openSidebarCart="openSidebarCart = true" />
+      <CartIcon
+       @openSidebarCart="openSidebarCart = !openSidebarCart"
+       :class="{'hidden': openSidebarCart}"
+       />
 
     </div>
 

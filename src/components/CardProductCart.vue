@@ -2,7 +2,7 @@
     <div class="flex cardItems p-3 border-b border-gray-200">
 
             <div class="cardImg w-[100px] h-[100px] flex-shrink-0">
-              <img src="../assets/img/calabresa.jpg" class="rounded-sm w-full h-full object-cover"
+              <img :src="`/deliveryproject/img/${product.image}`" class="rounded-sm w-full h-full object-cover"
                 :alt="product.name">
             </div>
 

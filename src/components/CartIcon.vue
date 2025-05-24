@@ -1,6 +1,6 @@
 <template>
     <div @click="$emit('openSidebarCart')"
-        class="notify flex bg-gray-100 w-[50px] h-[50px] rounded-full shadow-sm items-center fixed bottom-5 right-5 lg:right-0  cursor-pointer">
+        class="notify flex bg-gray-100 w-[50px] h-[50px] rounded-full shadow-sm items-center relative cursor-pointer">
         <i class="fa fa-shopping-cart ml-auto p-3 text-xl" aria-hidden="true">
         </i>
         <div

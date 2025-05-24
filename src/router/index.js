@@ -60,7 +60,7 @@ const router = createRouter({
 router.afterEach(() => {
 const { isLoading } = useLoading()
 
-isLoading.value = true
+  isLoading.value = true
 
   setTimeout(() => {
     isLoading.value = false

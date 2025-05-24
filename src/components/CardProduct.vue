@@ -2,7 +2,7 @@
   <div class="items-center w-full mt-3">
     <div class="flex border border-gray-200 shadow-sm items-start gap-4 p-2 transition duration-100">
       <div class="cardImg w-[100px] h-[100px] flex-shrink-0">
-        <img src="../assets/img/calabresa.jpg" class="rounded-sm w-full h-full object-cover" alt="Pizza de calabresa">
+        <img :src="`/deliveryproject/img/${product.image}`" class="rounded-sm w-full h-full object-cover" :alt="product.name">
       </div>
       <div class="cardContent w-full flex flex-col">
         <h2 class="font-bold">{{ product.name }}</h2>
@@ -12,13 +12,13 @@
         <p class="font-bold">R$ {{ product.price.toFixed(2) }}</p>
 
 
+        <div class="ml-auto">
 
-        <App-Button @addToCart="addToCart(product)" 
-        buttonClass="w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white"
+          <App-Button @addToCart="addToCart(product)" buttonClass="bg-red-500 hover:bg-red-600 text-white">
+            Adicionar ao carrinho
+          </App-Button>
 
-        >
-      Adicionar ao carrinho
-      </App-Button>
+        </div>
       </div>
     </div>
   </div>

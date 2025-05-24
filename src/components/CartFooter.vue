@@ -1,6 +1,12 @@
 <template>
+  <div class="subtotal flex justify-between">
+    <p class="text-sm flex items-center">
+      {{ cart.length }} itens
+
+    </p>
     <h2 class="text-sm py-2 font-semibold">Subtotal: R$ {{ subtotal.toFixed(2) }}</h2>
-          <div class="btnFinally">
+  </div>
+    <div class="btnFinally">
             
             <App-Button 
             v-if="cart.length > 0"

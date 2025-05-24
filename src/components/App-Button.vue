@@ -1,7 +1,7 @@
 <template>
     <button 
             @click="$emit('addToCart')"
-            :class="[`text-xs transition duration-100 py-2 px-3 ms-auto rounded-sm ml-auto cursor-pointer`,
+            :class="[`text-xs transition duration-100 py-2 px-3 rounded-sm ml-auto cursor-pointer`,
             buttonClass
 
             ]"

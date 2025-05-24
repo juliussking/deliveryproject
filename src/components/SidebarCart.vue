@@ -13,13 +13,19 @@
         />
 
         <div 
-        class="defaultCart flex flex-col items-center h-screen justify-center" 
+        class="defaultCart flex flex-col items-center h-screen justify-center"
+        @click="openSidebarCart = false" 
         v-if="cart.length === 0"
         >
           <p 
           class="text-center text-gray-400"
           >
           Seu carrinho está vazio! 😰 
+          </p>
+          <p 
+          class="text-center text-gray-400"
+          >
+          Toque para voltar ao menu.
           </p>
         </div>
 
