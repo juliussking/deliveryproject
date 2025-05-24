@@ -3,12 +3,12 @@
 
             <div class="cardImg w-[100px] h-[100px] flex-shrink-0">
               <img src="../assets/img/calabresa.jpg" class="rounded-sm w-full h-full object-cover"
-                alt="Pizza de calabresa">
+                :alt="product.name">
             </div>
 
             <div class="cardDetails flex-1 ml-3 w-full">
               <h3 class="cardTitle text-base font-semibold">{{ product.name }}</h3>
-              <p class="cardDescription text-xs text-gray-400">#{{ product.id }}</p>
+              <p class="cardDescription text-xs text-gray-400" v-for="(category, index) in product.category" :key="index">#{{ category }}</p>
               <p class="cardDescription text-xs">{{ product.description }}</p>
               <div class="adicionais text-xs my-2">
                 <h4>Adicionais:</h4>
@@ -36,7 +36,7 @@
                   </button>
                 </div>
               </div>
-              <p class="text-gray-400 text-xs font-normal mt-3" v-if="product.quantity > 1">{{ product.quantity }} x R$
+              <p class="text-gray-400 text-xs font-normal mt-3" >{{ product.quantity }} x R$
                 {{ product.price.toFixed(2) }}</p>
               <div class="flex justify-between h-[35px]">
                 <p class="cardPrice text-base font-semibold my-2"> R$ {{ (product.price * product.quantity).toFixed(2)
@@ -45,6 +45,7 @@
                 <App-Button 
                 textButton="Remover item"
                 colorIntense="700"
+                buttonColor="red"
                 colorHoverIntense="800"
                 buttonSize="w-25"
                 @click="$emit('removeItem', product)"

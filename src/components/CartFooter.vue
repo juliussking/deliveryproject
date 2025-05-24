@@ -4,7 +4,6 @@
             
             <App-Button 
             textButton="Ir para pagamento"
-            colorButton="green"
             colorIntense="700"
             colorHoverIntense="800"
             buttonSize="w-full"

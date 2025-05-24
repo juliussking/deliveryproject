@@ -1,7 +1,7 @@
 <template>
     <button 
             @click="$emit('addToCart')"
-            :class="`border bg-${colorButton}-${colorIntense} hover:bg-${colorButton}-${colorHoverIntense} text-xs text-white transition duration-100 py-2 px-3 ${buttonSize} md:w-auto ms-auto rounded-sm ml-auto cursor-pointer`"
+            :class="`border bg-${colorButton}-${colorIntense} hover:bg-${colorButton}-${colorHoverIntense} text-xs text-white transition duration-100 py-2 px-3 ${buttonSize} sm:w-auto ms-auto rounded-sm ml-auto cursor-pointer`"
             >
                 {{ textButton }}
             </button>
@@ -17,7 +17,7 @@ const props = defineProps({
 
     colorButton: {
         type: String,
-        default: 'indigo'
+        default: 'gray'
     },
     colorIntense: {
         type: [Number, String],
