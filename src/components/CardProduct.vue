@@ -13,8 +13,12 @@
 
 
 
-        <App-Button @addToCart="addToCart(product)" textButton="Adicionar ao carrinho" colorButton="red"
-          buttonSize="w-full" />
+        <App-Button @addToCart="addToCart(product)" 
+        buttonClass="w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white"
+
+        >
+      Adicionar ao carrinho
+      </App-Button>
       </div>
     </div>
   </div>

@@ -3,14 +3,13 @@
           <div class="btnFinally">
             
             <App-Button 
-            textButton="Ir para pagamento"
-            colorIntense="700"
-            colorHoverIntense="800"
-            buttonSize="w-full"
             v-if="cart.length > 0"
-            />
+            buttonClass="w-full bg-green-700 hover:bg-green-800 text-white"
+            >
+            Ir para pagamento
+          </App-Button>
 
-            <p @click="$emit('closeSidebarCart')" class="text-center text-sm p-2">ou <a href="#" class="text-red-500">continuar comprando</a></p>
+            <p @click="$emit('closeSidebarCart')" class="text-center text-sm p-2">ou <a href="#" class="text-red-500 hover:underline">continuar comprando</a></p>
           </div>
 </template>
 

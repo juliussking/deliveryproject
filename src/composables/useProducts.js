@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 const products = ref([
     { id: 1, name: 'Pizza de Calabresa', price: 28.90, description: 'Deliciosa pizza de calabresa com molho de tomate e muito queijo, presunto e azeitona', category: ['Salgada'], quantity: 1 },
     { id: 2, name: 'Pizza de Frango', price: 34.90, description: 'Deliciosa pizza de frango', category: ['Salgada'], quantity: 1 },
-    { id: 3, name: 'Pizza de Banana', price: 22.90, description: 'Deliciosa pizza de banana', category: ['Salgada'], quantity: 1 },
+    { id: 3, name: 'Pizza de Banana', price: 22.90, description: 'Deliciosa pizza de banana', category: ['Doce'], quantity: 1 },
     { id: 4, name: 'Pizza de Queijo com presunto', price: 46.90, description: 'Deliciosa pizza de queijo com presunto', category: ['Salgada'], quantity: 1 },
     { id: 5, name: 'Pizza de Portuguesa', price: 54.90, description: 'Deliciosa pizza de Portuguesa', category: ['Salgada', 'Promoção'], quantity: 1 },
     { id: 6, name: 'Pizza de Peperone', price: 36.90, description: 'Deliciosa pizza de peperone', category: ['Salgada'], quantity: 1 },

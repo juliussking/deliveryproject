@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import { useLoading } from '../composables/useLoading.js'
+
+
 import Promocoes from '../views/Promocoes.vue'
 import Todos from '../views/Todos.vue'
 import Salgadas from '../views/Salgadas.vue'
@@ -9,16 +12,18 @@ import Bebidas from '../views/Bebidas.vue'
 
 
 const router = createRouter({
+
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
+      redirect: { name: 'todos' },
       children: [
         {
           path: 'todos',
           component: Todos,
-          name: 'todos'
+          name: 'todos',
         },
         {
           path: 'promocoes',
@@ -50,6 +55,16 @@ const router = createRouter({
       component: () => import('../views/Home.vue'),
     },
   ],
+})
+
+router.afterEach(() => {
+const { isLoading } = useLoading()
+
+isLoading.value = true
+
+  setTimeout(() => {
+    isLoading.value = false
+  }, 1000)
 })
 
 export default router

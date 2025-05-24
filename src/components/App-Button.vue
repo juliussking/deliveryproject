@@ -1,37 +1,22 @@
 <template>
     <button 
             @click="$emit('addToCart')"
-            :class="`border bg-${colorButton}-${colorIntense} hover:bg-${colorButton}-${colorHoverIntense} text-xs text-white transition duration-100 py-2 px-3 ${buttonSize} sm:w-auto ms-auto rounded-sm ml-auto cursor-pointer`"
+            :class="[`text-xs transition duration-100 py-2 px-3 ms-auto rounded-sm ml-auto cursor-pointer`,
+            buttonClass
+
+            ]"
             >
-                {{ textButton }}
+                <slot>My Default Button</slot>
             </button>
 </template>
 
 <script setup>
 const props = defineProps({
 
-    textButton: {
+    buttonClass: {
         type: String,
-        default: 'My default button'
+        default: 'bg-gray-400',
     },
-
-    colorButton: {
-        type: String,
-        default: 'gray'
-    },
-    colorIntense: {
-        type: [Number, String],
-        default: 500
-    },
-    colorHoverIntense: {
-        type: [Number, String],
-        default: 500
-    },
-
-    buttonSize: {
-        type: String,
-        default: 'w-auto'
-    }
 
 
 })
