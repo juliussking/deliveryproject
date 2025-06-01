@@ -8,6 +8,7 @@ export const useCategoriesStore = defineStore('categories', {
             { id: 3, name: 'Salgada' },
             { id: 4, name: 'Doce' },
             { id: 5, name: 'Bebida' },
+            
         ],
 
         loading: true

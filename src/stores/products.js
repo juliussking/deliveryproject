@@ -6,7 +6,7 @@ export const useProductsStore = defineStore('products', {
             { id: 1, name: 'Pizza de Calabresa', price: 28.90, description: 'Deliciosa pizza de calabresa com molho de tomate e muito queijo, presunto e azeitona', category: ['Salgada'], quantity: 1, image: 'calabresa.jpg' },
             { id: 2, name: 'Pizza de Frango', price: 34.90, description: 'Deliciosa pizza de frango', category: ['Salgada'], quantity: 1, image: 'frango.jpg' },
             { id: 3, name: 'Pizza de Queijo com presunto', price: 46.90, description: 'Deliciosa pizza de queijo com presunto', category: ['Salgada'], quantity: 1, image: 'queijo-presunto.jpg' },
-            { id: 4, name: 'Pizza de Portuguesa', price: 54.90, description: 'Deliciosa pizza de Portuguesa', category: ['Salgada', 'Promoção'], quantity: 1, image: 'portuguesa.jpg' },
+            { id: 4, name: 'Pizza Portuguesa', price: 54.90, description: 'Deliciosa pizza de Portuguesa', category: ['Salgada', 'Promoção'], quantity: 1, image: 'portuguesa.jpg' },
             { id: 5, name: 'Pizza de Peperoni', price: 36.90, description: 'Deliciosa pizza de pepperoni', category: ['Salgada'], quantity: 1, image: 'pepperoni.jpg' },
             { id: 6, name: 'Pizza de Banana', price: 22.90, description: 'Deliciosa pizza de banana', category: ['Doce'], quantity: 1, image: 'banana.jpg' },
 
@@ -34,7 +34,6 @@ export const useProductsStore = defineStore('products', {
     }),
     actions: {
         productForCategory(category) {
-            console.log(category)
             this.selectedCategory = category
         }
     },

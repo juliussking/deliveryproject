@@ -35,6 +35,8 @@ export const useModalProductStore = defineStore('modalProduct', {
         },
         closeModal() {
             this.modal = false
+            this.additionalItem = []
+            this.openAdditionalSection = false
         },
 
         addToCart(product, additionalItem) {

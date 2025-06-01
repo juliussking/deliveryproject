@@ -26,7 +26,7 @@
       </div>
 
 
-      <div class="cartFooter px-2 flex flex-col bg-gray-100 absolute bottom-0 text-end w-full">
+      <div class="px-2 flex flex-col bg-gray-100 absolute bottom-0 text-end w-full">
 
         <SidebarFooter />
 

@@ -1,12 +1,11 @@
 <template>
   <div class="container max-w-4xl min-w-sm mx-auto relative ">
 
-    <div :class="['fixed', 'h-full', 'w-full', { 'ml-[100%]' : !useModal.modal }, 'bg-gray-900/60', 'z-1', 'flex', 'justify-center', 'items-center', 'transition-all', 'duration-300', 'ease-in-out']"
-      @click.self="useModal.closeModal()">
+    
       
-      <ModalProduct />
+    <ModalProduct />
 
-    </div>
+    
 
     <SidebarContent/>
 
@@ -44,7 +43,7 @@ import CartIcon from '../components/sidebarcart/CartIcon.vue'
 import SidebarContent from '../components/sidebarcart/SidebarContent.vue'
 import Menu from '../components/main/Menu.vue'
 import AppLogo from '../components/main/AppLogo.vue'
-import ModalProduct from '../components/main/ModalProduct.vue'
+import ModalProduct from '../components/modal/ModalProduct.vue'
 
 import { useModalProductStore } from '@/stores/modalProduct'
 const useModal = useModalProductStore()

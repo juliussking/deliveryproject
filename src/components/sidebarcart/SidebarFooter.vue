@@ -20,7 +20,10 @@
             Ir para pagamento
           </AppButton>
 
-            <p class="text-center text-sm p-2" v-if="cart.length">ou <a href="#" class="text-red-500 hover:underline">continuar comprando</a></p>
+            <p class="text-center text-sm p-2" v-if="cart.length">ou <span 
+              class="text-red-500 hover:underline cursor-pointer"
+              @click="useCart.closeSidebar()"
+              >continuar comprando</span></p>
           </div>
 </template>
 
